@@ -1,0 +1,20 @@
+[Pseudocode]
+Question: Priyanka and Toys
+Level: Easy
+Author: amititkgp
+Solution: Eugene Mwangi & Ndeda Kaduki.
+
+    Problem Statement:
+    The shipping company has a requirement that all items loaded in a container must
+    weigh less than or equal to 4 units plus the weight of the minimum weight item.
+    All items meeting that requirement will be shipped in one container. What is the
+    smallest number of containers that can be contracted to ship the items based on
+    the given list of weights?
+
+    Algorithm:
+
+        1) Sort the list of items to be shipped.
+        2) Pick the minimum weight item out of the list.
+        3) Add the number 4 to the minimum weight item.
+        4) Increment the container counter for an item weight not within 4 units of the minimum item weight.
+        5) Return the number of containers Priyanka must contract to ship all of the toys.
