@@ -1,0 +1,17 @@
+[Pseudocode]
+Question: Beautiful Triplets
+Level: easy
+Author: Shafaet
+Solution: apexDev37
+
+    Problem Statement:
+    Given an increasing sequence of integers and the value of `d`, count the 
+    number of beautiful triplets in the sequence.
+
+    NB: A triplet is beautiful if:
+      • `i < j < k`
+      • `a[j] - a[i] = a[k] - a[j] = d`
+
+    Pseudocode:
+
+    1)
