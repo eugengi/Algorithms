@@ -2,7 +2,7 @@
 Question: Beautiful Triplets
 Level: easy
 Author: Shafaet
-Solution: apexDev37
+Solution: eugengi
 
     Problem Statement:
     Given an increasing sequence of integers and the value of `d`, count the 
@@ -14,4 +14,6 @@ Solution: apexDev37
 
     Pseudocode:
 
-    1)
+    1) Get all the first values of a potential BT, (ie. a[i])
+    2) Compute all the BT from match and the first values of a potential BT
+    3) Compute all the potential BT variations in the given integer sequence.
