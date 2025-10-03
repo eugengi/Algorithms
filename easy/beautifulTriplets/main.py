@@ -18,14 +18,14 @@ def beautiful_triplets(step: int, vals: list[int]) -> int:
   return sum(compute_bt_variations(triplet, freq_map) for triplet in bt)
 
 
-def get_first_triplets(step: int, vals: list[int]) -> tuple[int]:
+def get_first_triplets(step: int, vals: list[int]) -> tuple[int, ...]:
   upper_bound = vals[-1] - (step * 2)
   return tuple(filter(lambda x: x <= upper_bound, vals))
 
 
 def compute_beautiful_triplets(step: int,
-                               first_triplets: tuple[int],
-                               vals: list[int]) -> tuple[tuple[int]]:
+                               first_triplets: tuple[int, ...],
+                               vals: list[int]) -> tuple[tuple[int, int, int], ...]:
   triplets = []
   for first in set(first_triplets):
     triplet = first, first + step, first + (step * 2)
@@ -42,7 +42,7 @@ def count_val_frequency(vals: list[int]) -> dict[int, int]:
 
 
 def compute_bt_variations(
-        triplet: tuple[int], frequency: dict[int, int]) -> int:
+        triplet: tuple[int, int, int], frequency: dict[int, int]) -> int:
   return frequency[triplet[0]] * \
       (frequency[triplet[1]] * frequency[triplet[2]])
 
