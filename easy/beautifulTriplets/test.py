@@ -6,11 +6,11 @@ Script: main.py
 import unittest
 
 from main import (
-  beautiful_triplets,
-  compute_beautiful_triplets,
-  compute_bt_variations,
-  count_val_frequency,
-  get_first_triplets,
+    beautiful_triplets,
+    compute_beautiful_triplets,
+    compute_bt_variations,
+    count_val_frequency,
+    get_first_triplets,
 )
 
 
@@ -24,10 +24,10 @@ class FunctionalTestCase(unittest.TestCase):
     # Given
     match, vals = 3, [1, 1, 2, 4, 4, 5, 5, 5, 7, 7, 8, 10]
     expected = (1, 1, 2, 4, 4)
-    
+
     # When
     actual = get_first_triplets(match, vals)
-    
+
     # Then
     self.assertIsInstance(actual, tuple)
     self.assertEqual(actual, expected)
@@ -37,44 +37,46 @@ class FunctionalTestCase(unittest.TestCase):
     match, first_triplets = 3, (1, 1, 2, 4, 4)
     vals = [1, 1, 2, 4, 4, 5, 5, 5, 7, 7, 8, 10]
     expected = (
-      (1, 4, 7),
-      (2, 5, 8),
-      (4, 7, 10),
+        (1, 4, 7),
+        (2, 5, 8),
+        (4, 7, 10),
     )
-    
+
     # When
     actual = compute_beautiful_triplets(match, first_triplets, vals)
-    
+
     # Then
     self.assertIsInstance(actual, tuple)
     self.assertCountEqual(
-      [triplets[0] for triplets in expected], set(first_triplets))
+        [triplets[0] for triplets in expected], set(first_triplets))
     self.assertEqual(actual, expected)
-  
+
   def test_should_count_frequency_of_each_value_for_values_list(self) -> None:
     # Given
     vals = [1, 1, 2, 4, 4, 5, 7]
     expected = {1: 2, 2: 1, 4: 2, 5: 1, 7: 1}
-    
+
     # When
     actual = count_val_frequency(vals)
-    
+
     # Then
     self.assertIsInstance(actual, dict)
     self.assertDictEqual(actual, expected)
 
-  def test_should_count_all_triplet_variations_for_duplicate_values(self) -> None:
+  def test_should_count_all_triplet_variations_for_duplicate_values(
+          self) -> None:
     # Given
     frequency = {1: 2, 2: 1, 4: 3, 5: 1, 7: 2}
     triplet = (1, 4, 7,)
     expected = 12
-    
+
     # When
     actual = compute_bt_variations(triplet, frequency)
-    
+
     # Then
     self.assertIsInstance(actual, int)
     self.assertEqual(actual, expected)
+
 
 class IntegrationTestCase(unittest.TestCase):
   """
@@ -88,10 +90,10 @@ class IntegrationTestCase(unittest.TestCase):
     # Given
     step, seq = 3, [1, 2, 4, 5, 7, 8, 10]
     expected = 3
-    
+
     # When
     actual = self.under_test(step, seq)
-    
+
     # Then
     self.assertIsInstance(actual, int)
     self.assertEqual(actual, expected)

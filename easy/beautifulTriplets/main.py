@@ -7,8 +7,9 @@
 """
 
 # This is main entry point function to complete
-# on the HackerRank platform. 
+# on the HackerRank platform.
 # Rename as per specified
+
 
 def beautiful_triplets(step: int, vals: list[int]) -> int:
   first = get_first_triplets(step, vals)
@@ -22,10 +23,12 @@ def get_first_triplets(step: int, vals: list[int]) -> tuple[int]:
   return tuple(filter(lambda x: x <= upper_bound, vals))
 
 
-def compute_beautiful_triplets(step: int, first_triplets: tuple[int], vals: list[int]) -> tuple[tuple[int]]:
+def compute_beautiful_triplets(step: int,
+                               first_triplets: tuple[int],
+                               vals: list[int]) -> tuple[tuple[int]]:
   triplets = []
   for first in set(first_triplets):
-    triplet = first, first + step, first + (step * 2) 
+    triplet = first, first + step, first + (step * 2)
     if set(triplet).issubset(vals):
       triplets.append(triplet)
   return tuple(triplets)
@@ -38,8 +41,10 @@ def count_val_frequency(vals: list[int]) -> dict[int, int]:
   return freq
 
 
-def compute_bt_variations(triplet: tuple[int], frequency: dict[int, int]) -> int:
-  return frequency[triplet[0]] * (frequency[triplet[1]] * frequency[triplet[2]])
+def compute_bt_variations(
+        triplet: tuple[int], frequency: dict[int, int]) -> int:
+  return frequency[triplet[0]] * \
+      (frequency[triplet[1]] * frequency[triplet[2]])
 
 
 def main() -> None:
