@@ -1,0 +1,15 @@
+[Pseudocode]
+Question: Modified Kaprekar Numbers
+Level: easy
+Author: PRASHANTB1984
+Solution: apexDev37
+
+    Problem Statement:
+    Given two positive integers `p` and `q`, where `p` is lower than `q`, write
+    a program to print the modified Kaprekar numbers in the range between `p`
+    and `q` (inclusive). If no modified Kaprekar numbers exist in the given
+    range, print INVALID RANGE.
+
+    Pseudocode:
+
+    1)
