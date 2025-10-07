@@ -12,4 +12,10 @@ Solution: apexDev37
 
     Pseudocode:
 
-    1)
+    1) Iterate through integers in the inclusive range `p` and `q`.
+    2) Square the current value, `n`.
+    3) Store the number of digits for `n`.
+    4) Split the square of `n` into `l` and `r`, where `r` has `n` digits
+    5) Sum the split `l` and `r`
+    6) Check if sum equals `n`
+    7) Output list of Kaprekar numbers, if none, then "INVALID RANGE"
