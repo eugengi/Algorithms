@@ -8,9 +8,9 @@ import io
 import unittest
 
 from main import (
-  kaprekar_numbers,
-  _is_mkn,
-  _split,
+    kaprekar_numbers,
+    _is_mkn,
+    _split,
 )
 
 
@@ -20,15 +20,16 @@ class FunctionalTestCase(unittest.TestCase):
   Note: You want to skip these tests if your approach changes.
   """
 
-  def test_should_split_value_into_two_where_right_half_length_equals_digits(self) -> None:
+  def test_should_split_value_into_two_where_right_half_length_equals_digits(
+          self) -> None:
     # Given
     value = 25
     digits = 1
     expected = 2, 5
-    
+
     # When
     actual = _split(value, digits)
-    
+
     # Then
     self.assertIsInstance(actual, tuple)
     self.assertIsInstance(actual[0], int)
@@ -42,7 +43,7 @@ class FunctionalTestCase(unittest.TestCase):
 
     # When
     actual = _is_mkn(value)
-    
+
     # Then
     self.assertIsInstance(actual, bool)
     self.assertEqual(actual, expected)
@@ -60,15 +61,15 @@ class IntegrationTestCase(unittest.TestCase):
     # Given
     lower, upper = 1, 10
     expected = "1 9 \n"
-    
+
     # In-memory text stream
     captured_output = io.StringIO()
-    
+
     # When
     with redirect_stdout(captured_output):
       self.under_test(lower, upper)
     actual = captured_output.getvalue()
-    
+
     # Then
     self.assertIsInstance(actual, str)
     self.assertEqual(actual, expected)
@@ -77,15 +78,15 @@ class IntegrationTestCase(unittest.TestCase):
     # Given
     lower, upper = 10, 30
     expected = "INVALID RANGE\n"
-    
+
     # In-memory text stream
     captured_output = io.StringIO()
-    
+
     # When
     with redirect_stdout(captured_output):
       self.under_test(lower, upper)
     actual = captured_output.getvalue()
-    
+
     # Then
     self.assertIsInstance(actual, str)
     self.assertEqual(actual, expected)

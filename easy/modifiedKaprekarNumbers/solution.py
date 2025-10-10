@@ -13,6 +13,7 @@ import math
 # Copy and paste all your functional code from
 # from the HackerRank platform.
 
+
 def kaprekar_numbers(lower: int, upper: int) -> None:
   mkn = 0
   for val in range(lower, upper + 1):

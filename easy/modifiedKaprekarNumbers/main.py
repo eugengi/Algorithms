@@ -7,7 +7,7 @@
 """
 
 # This is main entry point function to complete
-# on the HackerRank platform. 
+# on the HackerRank platform.
 # Rename as per specified
 
 import math
