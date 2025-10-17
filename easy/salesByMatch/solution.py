@@ -11,12 +11,13 @@
 # Copy and paste all your functional code from
 # from the HackerRank platform.
 
+
 def sock_merchant(count: int, socks: list[int]) -> int:
   organized_socks = group_by_color(socks)
   pairs = get_pairs(organized_socks)
   return sum(pairs)
 
-  
+
 def group_by_color(socks: list[int]) -> dict[int, int]:
   colors = set(socks)
   return {color: socks.count(color) for color in colors}

@@ -22,15 +22,16 @@ class FunctionalTestCase(unittest.TestCase):
     # Given
     socks = [1, 2, 5, 4, 5, 2, 1, 1, 1]
     expected = {1: 4, 2: 2, 4: 1, 5: 2}
-    
+
     # When
     actual = group_by_color(socks)
-    
+
     # Then
     self.assertIsInstance(actual, dict)
     self.assertDictEqual(actual, expected)
 
-  def test_should_compute_pairs_for_organized_socks_grouped_by_color(self) -> None:
+  def test_should_compute_pairs_for_organized_socks_grouped_by_color(
+          self) -> None:
     # Given
     socks = {1: 4, 2: 2, 4: 1, 5: 2}
     expected = (2, 1, 0, 1,)
@@ -51,14 +52,15 @@ class IntegrationTestCase(unittest.TestCase):
   def setUp(self) -> None:
     self.under_test = sock_merchant
 
-  def test_should_return_number_of_sock_pairs_with_matching_colors(self) -> None:
-    # Given    
+  def test_should_return_number_of_sock_pairs_with_matching_colors(
+          self) -> None:
+    # Given
     socks = [1, 2, 5, 4, 5, 2, 1, 1, 1]
     expected = 4
-    
+
     # When
     actual = self.under_test(..., socks)
-    
+
     # Then
     self.assertIsInstance(actual, int)
     self.assertEqual(actual, expected)
