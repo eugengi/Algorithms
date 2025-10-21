@@ -1,0 +1,31 @@
+[Pseudocode]
+Question: Minimum Distances
+Level: Easy
+Author: Shafaet
+Solution: achore26 & eugengi
+
+    Problem Statement:
+    The distance between two array values is the number of indices between them.
+    Given `a`, find the minimum distance between any pair of equal elements in 
+    the array. If no such value exists, return `-1`.
+
+    Example: `a = [3, 2, 1, 2, 3]`
+
+    Pseudocode:
+
+    1) Get the unique elements in an array.
+       => (1, 2, 3)
+
+    2) Check if each element occurs more than once and store its indices.
+       => element: 3, indices: [0, 4] 
+       => element: 2, indices: [1, 3]
+       => ...
+
+    3) Compute the indices minimum difference for each recurring element.
+       => [0, 4] = 4 
+       => [1, 3] = 2
+       => [0, 4, 6, 8, 11, 12] = 1 
+
+
+    4) Determine and return the minimum difference among all recurring elements.
+       If there are no recurring elements, hence, no distances, return -1.
