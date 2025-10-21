@@ -1,0 +1,19 @@
+[Pseudocode]
+Question: Beautiful Triplets
+Level: easy
+Author: Shafaet
+Solution: eugengi
+
+    Problem Statement:
+    Given an increasing sequence of integers and the value of `d`, count the 
+    number of beautiful triplets in the sequence.
+
+    NB: A triplet is beautiful if:
+      • `i < j < k`
+      • `a[j] - a[i] = a[k] - a[j] = d`
+
+    Pseudocode:
+
+    1) Get all the first values of a potential BT, (ie. a[i])
+    2) Compute all the BT from match and the first values of a potential BT
+    3) Compute all the potential BT variations in the given integer sequence.
