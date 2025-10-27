@@ -1,0 +1,23 @@
+[Algorithm]
+Question: Sales by Match
+Level: easy
+Author: Shafaet
+Solution: apexDev37
+
+    Problem Statement:
+    There is a large pile of socks that must be paired by color. Given an array
+    of integers representing the color of each sock, determine how many pairs of
+    socks with matching colors there are.
+
+    Pseudocode:
+
+    1) Determine and count the number of unique colors in the pile of 
+       unorganized socks.
+
+    2) Organize the pile of socks by grouping socks with matching colors 
+       together.
+
+    3) Form pairs of 2 for each group of socks with matching colors
+
+    4) Count the number of pairs in each group of socks and sum the pairs for
+       each group to find the total pairs for the entire pile of socks.
