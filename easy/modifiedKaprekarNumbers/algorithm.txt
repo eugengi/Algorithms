@@ -1,0 +1,21 @@
+[Pseudocode]
+Question: Modified Kaprekar Numbers
+Level: easy
+Author: PRASHANTB1984
+Solution: apexDev37
+
+    Problem Statement:
+    Given two positive integers `p` and `q`, where `p` is lower than `q`, write
+    a program to print the modified Kaprekar numbers in the range between `p`
+    and `q` (inclusive). If no modified Kaprekar numbers exist in the given
+    range, print INVALID RANGE.
+
+    Pseudocode:
+
+    1) Iterate through integers in the inclusive range `p` and `q`.
+    2) Square the current value, `n`.
+    3) Store the number of digits for `n`.
+    4) Split the square of `n` into `l` and `r`, where `r` has `n` digits
+    5) Sum the split `l` and `r`
+    6) Check if sum equals `n`
+    7) Output list of Kaprekar numbers, if none, then "INVALID RANGE"

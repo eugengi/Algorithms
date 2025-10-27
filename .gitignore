@@ -161,3 +161,6 @@ cython_debug/
 
 # IDEs, Code & Text Editors
 .vscode/
+
+# Snyk Security Extension - AI Rules (auto-generated)
+.github/instructions/snyk_rules.instructions.md
