@@ -1,0 +1,12 @@
+[Pseudocode]
+Question: Halloween Sale
+Level: Easy
+Author: kevinsogo
+Solution: eugengi
+
+    [Example]
+    Outline steps for your algorithmic approach:
+
+        1) Step one
+        2) Step two
+        3) Step three
