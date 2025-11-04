@@ -4,9 +4,36 @@ Level: Easy
 Author: kevinsogo
 Solution: eugengi
 
-    [Example]
-    Outline steps for your algorithmic approach:
+    Problem Statement:
+    You wish to buy video games from the famous online video game store Mist.
 
-        1) Step one
-        2) Step two
-        3) Step three
+    Usually, all games are sold at the same price, `p` dollars. However, they 
+    are planning to have the seasonal Halloween Sale next month in which you can
+    buy games at a cheaper price. Specifically, the first game will cost `p` 
+    dollars, and every subsequent game will cost `d` dollars less than the 
+    previous one. This continues until the cost becomes less than or equal to
+    `m` dollars, after which every game will cost `m` dollars.
+    
+    How many games can you buy during the Halloween Sale?
+
+    Abbreviations:
+    `p`: starting game price
+    `d`: discount game price
+    `m`: minimum game price
+    `s`: customer budget or wallet
+
+
+    Pseudocode:
+
+    1) Get sequence of all the discount prices, `d` before the minimum
+       price, `m`.
+    2) Compute sum of the discount prices sequence and check if within customer
+       budget `s`.
+    3) If computed sum is greater or equals customer budget, `s`, return number
+       of games within budget, else proceed.
+    4) Compute customer budget balance after purchasing discount price games,
+       `d` before minimum price, `m`.
+    5) Compute number of games remaining customer balance can purchase at the
+       minimum price, `m`.
+    6) Sum and return the total games from both discount game prices before `d`
+       and at the minimum price, `m` (if any).
