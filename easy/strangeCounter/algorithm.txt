@@ -1,0 +1,15 @@
+[Pseudocode]
+Question: Strange Counter
+Level: Easy
+Author: Shafaet
+Solution: eugengi
+
+    Problem Statement:
+    There is a strange counter. At the first second, it displays the number 3.
+    Each second, the number displayed by decrements by 1 until it reaches 1.
+    In next second. the timer resets to 2 x the initial number for the prior
+    cycle and continues counting down.
+
+    Find and print the value displayed by the counter at time `t`.
+
+    Pseudocode:
