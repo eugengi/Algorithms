@@ -12,4 +12,21 @@ Solution: eugengi
 
     Find and print the value displayed by the counter at time `t`.
 
+    Abbreviations:
+    • t: time (second)
+    • v: counter value for each `t` (number)
+    • gt: given time, `t`, as provided input for HackerRank function
+    • ft: first second, `t`, in a cycle
+    • fv: first value, `v`, in a cycle
+    • lt: last second, `t`, in a cycle
+
+
     Pseudocode:
+
+    1) Generate a sequence of the `fv` for each cycle
+    2) Given each `fv`, compute the `ft` and the `lt` for that cycle
+    3) Evaluate if the `gt` is within the range of the `ft` and the `lt`
+    4) If within range, then proceed; else evaluate the next `fv` in sequence
+    5) Find the difference between the `gt` and `ft`.
+    4) Output the `gt` value by finding the difference between the `fv` and the
+       result above.
